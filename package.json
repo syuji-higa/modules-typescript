@@ -1,0 +1,29 @@
+{
+  "name": "typescript-modules",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tslint-check": "tslint-config-prettier-check ./tslint.json",
+    "lint": "tslint 'src/**/*.ts'",
+    "typedoc": "typedoc --out docs ./src -m esnext -t es5",
+    "precommit": "npm run lint -- --fix && npm run typedoc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syuji-higa/typescript-modules.git"
+  },
+  "author": "syuji-higa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/syuji-higa/typescript-modules/issues"
+  },
+  "homepage": "https://github.com/syuji-higa/typescript-modules#readme",
+  "devDependencies": {
+    "prettier": "^1.16.4",
+    "tslint": "^5.14.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "typedoc": "^0.14.2"
+  }
+}
