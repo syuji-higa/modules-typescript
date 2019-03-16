@@ -1,8 +1,4 @@
-/**
- * array
- */
-
-export const createArray = (num: number, val: any): any[] => {
+export const createArray = (num: number /* int[0,inf) */, val: any): any[] => {
   const _arr: any[] = []
 
   for (let i: number = 0; num > i; i++) {
@@ -13,8 +9,8 @@ export const createArray = (num: number, val: any): any[] => {
 }
 
 export const createSerialNumberArray = (
-  num: number,
-  start: number = 0
+  num: number /* int[0,inf) */,
+  start: number /* int */ = 0
 ): number[] => {
   const _arr: number[] = []
 
@@ -26,9 +22,9 @@ export const createSerialNumberArray = (
 }
 
 export const shuffleArray = (arr: any[]): any[] => {
-  let _n: number = arr.length
-  let _t: number = 0
-  let _i: number = 0
+  let _n: number /* int[0,inf) */ = arr.length
+  let _t: number /* int[0,inf) */ = 0
+  let _i: number /* int[0,inf) */ = 0
 
   while (_n) {
     _i = Math.floor(Math.random() * _n--)
@@ -48,7 +44,10 @@ export const flattenArray = (arr: any[][]): any[] => {
   }, [])
 }
 
-export const caterpillarArray = (arr: any[], num: number): any[] => {
+export const caterpillarArray = (
+  arr: any[],
+  num: number /* int[0,inf) */
+): any[] => {
   if (0 < num) {
     arr.push(arr.splice(0, num))
   } else if (0 > num) {
