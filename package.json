@@ -6,8 +6,9 @@
   "scripts": {
     "tslint-check": "tslint-config-prettier-check ./tslint.json",
     "lint": "tslint 'src/**/*.ts'",
-    "typedoc": "typedoc --out docs ./src -m esnext -t es5",
-    "precommit": "npm run lint -- --fix && npm run typedoc"
+    "test": "jest",
+    "typedoc": "typedoc --mode file --out docs --excludeExternals --excludePrivate --exclude 'node_modules/**' src",
+    "precommit": "npm run lint -- --fix && npm run test && npm run typedoc"
   },
   "repository": {
     "type": "git",
@@ -20,10 +21,27 @@
   },
   "homepage": "https://github.com/syuji-higa/typescript-modules#readme",
   "devDependencies": {
+    "@types/jest": "^24.0.11",
+    "jest": "^24.5.0",
     "prettier": "^1.16.4",
+    "ts-jest": "^24.0.0",
     "tslint": "^5.14.0",
     "tslint-config-prettier": "^1.18.0",
     "tslint-plugin-prettier": "^2.0.1",
     "typedoc": "^0.14.2"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts)$": "ts-jest"
+    },
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "tsconfig.json"
+      }
+    }
   }
 }

@@ -15,12 +15,22 @@ fix command.
 $ npm run lint -- --fix
 ```
 
+## Jest unit test
+```
+$ npm run test
+```
+
+watch command.
+```
+$ npm run test -- --watch
+```
+
 ## TypeDoc
 ```
 $ npm run typedoc
 ```
 
-## TSLint and TypeDoc
+## TSLint and Jest and TypeDoc
 ```
 $ npm run precommit
 ```
