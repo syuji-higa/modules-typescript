@@ -1,7 +1,7 @@
 {
   "name": "typescript-modules",
   "version": "1.0.0",
-  "description": "",
+  "description": "General purpose TypeScript modules.",
   "main": "index.js",
   "scripts": {
     "tslint-check": "tslint-config-prettier-check ./tslint.json",
