@@ -12,7 +12,7 @@ $ npm run lint
 
 fix command.
 ```
-$ npm run lint -- -- fix
+$ npm run lint -- --fix
 ```
 
 ## TypeDoc
